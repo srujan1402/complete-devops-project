@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'scripts\\build.sh'
+                bat 'scripts\\build.bat'
             }
         }
 
