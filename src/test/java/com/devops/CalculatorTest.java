@@ -22,6 +22,21 @@ public class CalculatorTest {
         } catch (ArithmeticException e) {
             passed++;
         }
+        // Power test
+try {
+    int result = calc.power(2, 3);
+    if (result == 8) {
+        System.out.println("Power test passed");
+        passed++;
+    } else {
+        System.out.println("Power test failed");
+        failed++;
+    }
+} catch (Exception e) {
+    System.out.println("Power test error");
+    failed++;
+}
+
 
         System.out.println("Passed: " + passed);
         System.out.println("Failed: " + failed);
