@@ -44,6 +44,15 @@ pipeline {
                 '''
             }
         }
+        stage('Docker Build') {
+    steps {
+        echo 'Building Docker image...'
+        bat '''
+        docker build -t calculator:${BUILD_NUMBER} .
+        '''
+    }
+}
+
 
         stage('Deploy') {
             when {
